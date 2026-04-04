@@ -1,180 +1,237 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>SILK GROUP</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SILK GROUP</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<style>
-body {
-    margin:0;
-    font-family: Arial;
-    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('background.jpg');
-    background-size: cover;
-    color:white;
-}
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: url('background.jpg') no-repeat center center/cover;
+      color: white;
+    }
 
-/* HEADER */
-header {
-    text-align:center;
-    padding:20px;
-    background: rgba(0,0,0,0.7);
-}
+    /* DARK OVERLAY */
+    body::before {
+      content: "";
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.7);
+      top: 0;
+      left: 0;
+      z-index: -1;
+    }
 
-header img {
-    width:80px;
-}
+    header {
+      text-align: center;
+      padding: 30px;
+    }
 
-h1 {
-    margin:10px 0;
-}
+    header img {
+      width: 90px;
+      border-radius: 10px;
+    }
 
-/* SERVICES */
-.services {
-    text-align:center;
-    padding:20px;
-    background: rgba(0,0,0,0.6);
-    margin:20px;
-    border-radius:10px;
-}
+    h1 {
+      margin: 10px 0;
+      color: gold;
+      letter-spacing: 2px;
+    }
 
-/* SECTION TITLE */
-h2 {
-    text-align:center;
-    text-shadow: 2px 2px 5px black;
-}
+    h2 {
+      color: gold;
+    }
 
-/* PRODUCTS */
-.container {
-    display:flex;
-    flex-wrap:wrap;
-    justify-content:center;
-}
+    section {
+      margin: 30px;
+      padding: 25px;
+      border-radius: 15px;
+      backdrop-filter: blur(10px);
+      background: rgba(255,255,255,0.08);
+      box-shadow: 0 0 15px rgba(0,0,0,0.5);
+      text-align: center;
+    }
 
-.card {
-    background:white;
-    color:black;
-    margin:15px;
-    padding:10px;
-    width:220px;
-    border-radius:10px;
-    text-align:center;
-    box-shadow: 0 0 10px black;
-}
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
 
-.card img {
-    width:100%;
-    height:150px;
-    object-fit:cover;
-    border-radius:10px;
-}
+    .card {
+      background: rgba(255,255,255,0.1);
+      margin: 15px;
+      padding: 15px;
+      border-radius: 15px;
+      width: 220px;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 0 10px rgba(0,0,0,0.5);
+      transition: 0.3s;
+    }
 
-/* BUTTON */
-.btn {
-    display:inline-block;
-    margin-top:10px;
-    padding:8px 12px;
-    background:green;
-    color:white;
-    text-decoration:none;
-    border-radius:5px;
-}
+    .card:hover {
+      transform: scale(1.05);
+    }
 
-/* SOCIAL */
-.social {
-    text-align:center;
-    padding:20px;
-    background: rgba(0,0,0,0.6);
-    margin:20px;
-    border-radius:10px;
-}
+    .card img {
+      width: 100%;
+      border-radius: 10px;
+    }
 
-.social a {
-    margin:10px;
-    color:white;
-    font-size:18px;
-    text-decoration:none;
-}
+    .btn {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 10px;
+      background: gold;
+      color: black;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+    }
 
-/* FLOAT WHATSAPP */
-.whatsapp {
-    position:fixed;
-    bottom:20px;
-    right:20px;
-    background:green;
-    color:white;
-    padding:15px;
-    border-radius:50%;
-    font-size:22px;
-    text-decoration:none;
-}
-</style>
+    .btn:hover {
+      background: orange;
+    }
+
+    /* CONTACT BOX */
+    .box {
+      margin: 20px;
+      padding: 20px;
+      border-radius: 15px;
+      background: rgba(0,0,0,0.8);
+      text-align: center;
+      color: #00ffcc;
+      font-weight: bold;
+      box-shadow: 0 0 10px black;
+    }
+
+    /* SOCIAL */
+    .social-buttons a {
+      display: inline-block;
+      margin: 10px;
+      padding: 12px 20px;
+      border-radius: 8px;
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .social-buttons a:hover {
+      transform: scale(1.1);
+    }
+
+    .whatsapp { background: #25D366; }
+    .instagram { background: #E1306C; }
+    .linkedin { background: #0077B5; }
+    .youtube { background: #FF0000; }
+
+  </style>
 </head>
 
 <body>
 
 <header>
-    <img src="logo.png">
-    <h1>SILK GROUP</h1>
+  <img src="logo.png">
+  <h1>SILK GROUP</h1>
+  <p>Silk Online Services & Silk Technologies</p>
 </header>
 
-<div class="services">
-<h2>Our Services</h2>
-<p>CSC Services | Aadhaar | PAN | Passport | Bill Payments | Xerox | Printing | All Online Works</p>
+<section>
+  <h2>Our Services</h2>
+  <p>
+    CSC Services <br>
+    Aadhaar, Pan Card, Passport, Bill Payments <br>
+    Xerox, Printing Services <br>
+    All Online Works
+  </p>
+</section>
+
+<section>
+  <h2>Our Products</h2>
+
+  <div class="container">
+
+    <div class="card">
+      <img src="stationery.jpg">
+      <h3>Stationery</h3>
+      <a href="https://wa.me/919491874711" class="btn">Order</a>
+    </div>
+
+    <div class="card">
+      <img src="gift.jpg">
+      <h3>Gift Items</h3>
+      <a href="https://wa.me/919491874711" class="btn">Order</a>
+    </div>
+
+    <div class="card">
+      <img src="chocolate.jpg">
+      <h3>Chocolates</h3>
+      <a href="https://wa.me/919491874711" class="btn">Order</a>
+    </div>
+
+    <div class="card">
+      <img src="icecream.jpg">
+      <h3>Ice Cream</h3>
+      <a href="https://wa.me/919491874711" class="btn">Order</a>
+    </div>
+
+  </div>
+</section>
+
+<section>
+  <h2>Silk - The Perfume Gallery</h2>
+
+  <div class="container">
+
+    <div class="card">
+      <img src="attar.jpg">
+      <h3>Attars</h3>
+    </div>
+
+    <div class="card">
+      <img src="perfume.jpg">
+      <h3>Perfumes</h3>
+    </div>
+
+    <div class="card">
+      <img src="cap.jpg">
+      <h3>Islamic Caps</h3>
+    </div>
+
+    <div class="card">
+      <img src="dates.jpg">
+      <h3>Dates</h3>
+    </div>
+
+  </div>
+</section>
+
+<div class="box">
+  📞 Phone Numbers:<br>
+  9491874711 | 9440774711<br>
+  9493376611 | 9052286611
 </div>
 
-<h2>Our Products</h2>
-
-<div class="container">
-
-<div class="card">
-<img src="gift.jpg">
-<h3>Gift Items</h3>
-<a href="https://wa.me/9491874711" class="btn">Order Now</a>
+<div class="box">
+  📍 Address:<br>
+  Shop No:01, Below TGB Bank,<br>
+  Village Manneguda, Mandal Pudur,<br>
+  Dist Vikarabad, Pin: 501101
 </div>
 
-<div class="card">
-<img src="chocolate.jpg">
-<h3>Chocolates</h3>
-<a href="https://wa.me/9491874711" class="btn">Order Now</a>
-</div>
+<section>
+  <h2>Connect With Us</h2>
 
-<div class="card">
-<img src="icecream.jpg">
-<h3>Ice Cream</h3>
-<a href="https://wa.me/9491874711" class="btn">Order Now</a>
-</div>
-
-<div class="card">
-<img src="perfume.jpg">
-<h3>Perfumes</h3>
-<a href="https://wa.me/9491874711" class="btn">Order Now</a>
-</div>
-
-<div class="card">
-<img src="attar.jpg">
-<h3>Attars</h3>
-<a href="https://wa.me/9491874711" class="btn">Order Now</a>
-</div>
-
-<div class="card">
-<img src="stationery.jpg">
-<h3>Stationery</h3>
-<a href="https://wa.me/9491874711" class="btn">Order Now</a>
-</div>
-
-</div>
-
-<!-- SOCIAL LINKS -->
-<div class="social">
-<h2>Follow Us</h2>
-<a href="https://wa.me/9491874711">WhatsApp</a> |
-<a href="https://instagram.com/">Instagram</a> |
-<a href="https://linkedin.com/">LinkedIn</a> |
-<a href="https://youtube.com/">YouTube</a>
-</div>
-
-<!-- FLOATING WHATSAPP -->
-<a href="https://wa.me/9491874711" class="whatsapp">💬</a>
+  <div class="social-buttons">
+    <a href="https://wa.me/919491874711" class="whatsapp">WhatsApp</a>
+    <a href="#" class="instagram">Instagram</a>
+    <a href="#" class="linkedin">LinkedIn</a>
+    <a href="#" class="youtube">YouTube</a>
+  </div>
+</section>
 
 </body>
 </html>
