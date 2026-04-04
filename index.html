@@ -1,109 +1,97 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>SILK GROUP</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SILK GROUP</title>
 
-  <style>
-    body {
-      font-family: Arial;
-      margin: 0;
-      background: #f4f4f4;
-    }
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    header {
-      background: black;
-      color: white;
-      text-align: center;
-      padding: 20px;
-    }
+<style>
 
-    h2 {
-      text-align: center;
-      margin-top: 30px;
-    }
+body {
+  font-family: Arial;
+  margin: 0;
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+              url('background.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: white;
+}
 
-    .container {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
+header {
+  background: black;
+  color: white;
+  padding: 15px;
+  text-align: center;
+  font-size: 28px;
+  letter-spacing: 2px;
+}
 
-    .card {
-      background: white;
-      margin: 15px;
-      padding: 15px;
-      width: 220px;
-      border-radius: 10px;
-      text-align: center;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    }
+.section {
+  text-align: center;
+  padding: 20px;
+}
 
-    .card img {
-      width: 100%;
-      height: 150px;
-      object-fit: cover;
-      border-radius: 10px;
-    }
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
 
-    .info {
-      background: white;
-      margin: 20px;
-      padding: 15px;
-      border-radius: 10px;
-      text-align: center;
-    }
+.card {
+  background: rgba(255,255,255,0.1);
+  margin: 15px;
+  padding: 10px;
+  width: 220px;
+  border-radius: 10px;
+  backdrop-filter: blur(5px);
+}
 
-    footer {
-      background: black;
-      color: white;
-      text-align: center;
-      padding: 10px;
-    }
+.card img {
+  width: 100%;
+  height: 150px;
+  border-radius: 10px;
+}
 
-    .social {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-    }
+h2 {
+  text-align: center;
+  margin-top: 20px;
+}
 
-    .social a {
-      padding: 12px;
-      border-radius: 50%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
+.social {
+  text-align: center;
+  margin: 30px;
+}
 
-    .whatsapp { background: #25D366; }
-    .instagram { background: #E1306C; }
-    .linkedin { background: #0077B5; }
-    .youtube { background: red; }
+.social a {
+  display: inline-block;
+  margin: 10px;
+  padding: 10px 20px;
+  background: gold;
+  color: black;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+}
 
-    .social img {
-      width: 20px;
-      height: 20px;
-    }
-  </style>
+</style>
+
 </head>
 
 <body>
 
 <header>
-  <h1>SILK GROUP</h1>
-  <p>Online Services & Product Store</p>
+  SILK GROUP
 </header>
 
-<h2>Our Services</h2>
-<div class="info">
-  CSC Services | Aadhaar | PAN | Passport | Bill Payments <br>
-  Xerox | Printing | All Online Works
+<div class="section">
+  <h2>Our Services</h2>
+  <p>
+    CSC Services | Aadhaar | PAN | Passport | Bill Payments <br>
+    Xerox | Printing | All Online Works
+  </p>
 </div>
 
 <h2>Our Products</h2>
+
 <div class="container">
 
   <div class="card">
@@ -129,6 +117,7 @@
 </div>
 
 <h2>Perfume Gallery</h2>
+
 <div class="container">
 
   <div class="card">
@@ -143,39 +132,20 @@
 
 </div>
 
-<div class="info">
-  <h2>Contact</h2>
-  📞 9491874711 <br>
-  📞 9440774711 <br>
-  📞 9493376611 <br>
-  📞 9052286611 <br><br>
-
-  📍 Shop No:01, Below TGB Bank <br>
-  Village Manneguda, Pudur <br>
-  Dist Vikarabad - 501101
+<div class="section">
+  <h2>Contact Us</h2>
+  <p>
+    📞 9491874711, 9440774711 <br>
+    📍 Shop No:01, Manneguda, Vikarabad
+  </p>
 </div>
-
-<footer>
-  © 2026 SILK GROUP
-</footer>
 
 <div class="social">
 
-  <a href="https://wa.me/919491874711" class="whatsapp" target="_blank">
-    <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png">
-  </a>
-
-  <a href="https://instagram.com/yourusername" class="instagram" target="_blank">
-    <img src="https://cdn-icons-png.flaticon.com/512/733/733558.png">
-  </a>
-
-  <a href="https://linkedin.com/in/yourprofile" class="linkedin" target="_blank">
-    <img src="https://cdn-icons-png.flaticon.com/512/733/733561.png">
-  </a>
-
-  <a href="https://youtube.com/@yourchannel" class="youtube" target="_blank">
-    <img src="https://cdn-icons-png.flaticon.com/512/733/733646.png">
-  </a>
+  <a href="https://wa.me/9491874711">WhatsApp</a>
+  <a href="#">Instagram</a>
+  <a href="#">LinkedIn</a>
+  <a href="#">YouTube</a>
 
 </div>
 
