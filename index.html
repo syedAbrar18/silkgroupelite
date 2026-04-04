@@ -2,196 +2,164 @@
 <html>
 <head>
 <title>SILK GROUP</title>
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
-
 body {
-  font-family: Arial;
-  margin: 0;
-  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
-              url('background.jpg') no-repeat center center fixed;
-  background-size: cover;
-  color: white;
+    margin:0;
+    font-family: Arial;
+    background: url('background.jpg') no-repeat center center/cover;
+    color:white;
 }
 
 /* HEADER */
 header {
-  background: rgba(0,0,0,0.85);
-  color: white;
-  padding: 20px;
-  text-align: center;
+    text-align:center;
+    padding:20px;
+    background: rgba(0,0,0,0.7);
 }
 
 header img {
-  width: 90px;
-  display: block;
-  margin: auto;
+    width:80px;
 }
 
-header h1 {
-  margin-top: 10px;
-  letter-spacing: 3px;
+h1 {
+    margin:10px 0;
 }
 
-/* SECTIONS */
-.section {
-  text-align: center;
-  padding: 20px;
+/* SERVICES */
+.services {
+    text-align:center;
+    padding:20px;
 }
 
-h2 {
-  text-align: center;
-  margin-top: 20px;
-}
-
-/* PRODUCT CARDS */
+/* PRODUCTS */
 .container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
 }
 
 .card {
-  background: rgba(255,255,255,0.1);
-  margin: 15px;
-  padding: 10px;
-  width: 220px;
-  border-radius: 12px;
-  backdrop-filter: blur(6px);
-  transition: 0.3s;
-}
-
-.card:hover {
-  transform: scale(1.05);
+    background:white;
+    color:black;
+    margin:15px;
+    padding:10px;
+    width:220px;
+    border-radius:10px;
+    text-align:center;
 }
 
 .card img {
-  width: 100%;
-  height: 150px;
-  border-radius: 10px;
+    width:100%;
+    height:150px;
+    object-fit:cover;
+    border-radius:10px;
 }
 
-.card h3 {
-  margin-top: 10px;
+/* BUTTON */
+.btn {
+    display:inline-block;
+    margin-top:10px;
+    padding:8px 12px;
+    background:green;
+    color:white;
+    text-decoration:none;
+    border-radius:5px;
 }
 
-/* SOCIAL BUTTONS */
+/* SOCIAL */
 .social {
-  text-align: center;
-  margin: 30px;
+    text-align:center;
+    padding:20px;
 }
 
 .social a {
-  display: inline-block;
-  margin: 10px;
-  padding: 12px 20px;
-  background: gold;
-  color: black;
-  text-decoration: none;
-  border-radius: 6px;
-  font-weight: bold;
-  transition: 0.3s;
+    margin:10px;
+    color:white;
+    font-size:20px;
+    text-decoration:none;
 }
 
-.social a:hover {
-  background: orange;
+/* FLOAT WHATSAPP */
+.whatsapp {
+    position:fixed;
+    bottom:20px;
+    right:20px;
+    background:green;
+    color:white;
+    padding:15px;
+    border-radius:50%;
+    font-size:22px;
+    text-decoration:none;
 }
-
-/* FOOTER */
-footer {
-  text-align: center;
-  padding: 15px;
-  background: rgba(0,0,0,0.8);
-}
-
 </style>
-
 </head>
 
 <body>
 
-<!-- HEADER -->
 <header>
-  <img src="logo.png">
-  <h1>SILK GROUP</h1>
+    <img src="logo.png">
+    <h1>SILK GROUP</h1>
 </header>
 
-<!-- SERVICES -->
-<div class="section">
-  <h2>Our Services</h2>
-  <p>
-    CSC Services | Aadhaar | PAN | Passport | Bill Payments <br>
-    Xerox | Printing | All Online Works
-  </p>
+<div class="services">
+<h2>Our Services</h2>
+<p>CSC | Aadhaar | PAN | Passport | Bill Payments | Xerox | Printing</p>
 </div>
 
-<!-- PRODUCTS -->
-<h2>Our Products</h2>
+<h2 style="text-align:center;">Our Products</h2>
 
 <div class="container">
 
-  <div class="card">
-    <img src="stationery.jpg">
-    <h3>Stationery</h3>
-  </div>
+<div class="card">
+<img src="gift.jpg">
+<h3>Gift Items</h3>
+<a href="https://wa.me/9491874711" class="btn">Order Now</a>
+</div>
 
-  <div class="card">
-    <img src="gift.jpg">
-    <h3>Gift Items</h3>
-  </div>
+<div class="card">
+<img src="chocolate.jpg">
+<h3>Chocolates</h3>
+<a href="https://wa.me/9491874711" class="btn">Order Now</a>
+</div>
 
-  <div class="card">
-    <img src="chocolate.jpg">
-    <h3>Chocolates</h3>
-  </div>
+<div class="card">
+<img src="icecream.jpg">
+<h3>Ice Cream</h3>
+<a href="https://wa.me/9491874711" class="btn">Order Now</a>
+</div>
 
-  <div class="card">
-    <img src="icecream.jpg">
-    <h3>Ice Cream</h3>
-  </div>
+<div class="card">
+<img src="perfume.jpg">
+<h3>Perfumes</h3>
+<a href="https://wa.me/9491874711" class="btn">Order Now</a>
+</div>
+
+<div class="card">
+<img src="attar.jpg">
+<h3>Attars</h3>
+<a href="https://wa.me/9491874711" class="btn">Order Now</a>
+</div>
+
+<div class="card">
+<img src="stationery.jpg">
+<h3>Stationery</h3>
+<a href="https://wa.me/9491874711" class="btn">Order Now</a>
+</div>
 
 </div>
 
-<!-- PERFUME SECTION -->
-<h2>Perfume Gallery</h2>
-
-<div class="container">
-
-  <div class="card">
-    <img src="perfume.jpg">
-    <h3>Perfumes</h3>
-  </div>
-
-  <div class="card">
-    <img src="attar.jpg">
-    <h3>Attars</h3>
-  </div>
-
-</div>
-
-<!-- CONTACT -->
-<div class="section">
-  <h2>Contact Us</h2>
-  <p>
-    📞 9491874711, 9440774711, 9493376611, 9052286611 <br>
-    📍 Shop No:01, Below TGB Bank, Manneguda, Vikarabad - 501101
-  </p>
-</div>
-
-<!-- SOCIAL -->
+<!-- SOCIAL LINKS -->
 <div class="social">
-  <a href="https://wa.me/9491874711">WhatsApp</a>
-  <a href="#">Instagram</a>
-  <a href="#">LinkedIn</a>
-  <a href="#">YouTube</a>
+<a href="https://wa.me/9491874711">WhatsApp</a>
+<a href="https://instagram.com/">Instagram</a>
+<a href="https://linkedin.com/">LinkedIn</a>
+<a href="https://youtube.com/">YouTube</a>
 </div>
 
-<!-- FOOTER -->
-<footer>
-  © 2026 SILK GROUP | All Rights Reserved
-</footer>
+<!-- FLOATING WHATSAPP -->
+<a href="https://wa.me/9491874711" class="whatsapp">💬</a>
 
 </body>
 </html>
