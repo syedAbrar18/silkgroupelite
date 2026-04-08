@@ -1,170 +1,108 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>SILK GROUP</title>
+<title>Silk Group Elite</title>
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
 body {
-  margin:0;
-  font-family: 'Segoe UI', sans-serif;
-  background: url('background.jpg') no-repeat center center/cover;
-  color:white;
+    margin:0;
+    font-family:Arial;
+    background:url('background.jpg') no-repeat center/cover;
+    color:white;
 }
 
-/* DARK OVERLAY */
-body::before {
-  content:"";
-  position:fixed;
-  width:100%;
-  height:100%;
-  background:rgba(0,0,0,0.7);
-  z-index:-1;
+/* Glass Effect */
+.glass {
+    background: rgba(0,0,0,0.6);
+    backdrop-filter: blur(10px);
+    border-radius:15px;
+    padding:20px;
+    margin:20px;
+    animation:fadeIn 1s ease;
 }
 
-/* ANIMATION */
-@keyframes fadeIn {
-  from {opacity:0; transform:translateY(30px);}
-  to {opacity:1; transform:translateY(0);}
-}
-
-/* HEADER */
 header {
-  text-align:center;
-  padding:30px;
-  animation: fadeIn 1s ease;
+    text-align:center;
+    padding:30px;
 }
 
 header img {
-  width:90px;
-  border-radius:10px;
+    width:80px;
+    border-radius:50%;
 }
 
 h1 {
-  color: gold;
-  letter-spacing:2px;
+    color:gold;
 }
 
-h2 {
-  color: gold;
-}
-
-/* SECTIONS */
-section {
-  margin:30px;
-  padding:25px;
-  border-radius:15px;
-  backdrop-filter: blur(10px);
-  background: rgba(255,255,255,0.08);
-  box-shadow: 0 0 15px rgba(0,0,0,0.5);
-  text-align:center;
-  animation: fadeIn 1.2s ease;
-}
-
-/* PRODUCTS */
 .container {
-  display:flex;
-  flex-wrap:wrap;
-  justify-content:center;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
 }
 
 .card {
-  background: rgba(255,255,255,0.1);
-  margin:15px;
-  padding:15px;
-  border-radius:15px;
-  width:220px;
-  backdrop-filter: blur(10px);
-  transition:0.4s;
-  animation: fadeIn 1.5s ease;
+    background:white;
+    color:black;
+    width:250px;
+    margin:15px;
+    padding:15px;
+    border-radius:15px;
+    text-align:center;
+    transition:0.3s;
 }
 
 .card:hover {
-  transform: scale(1.08);
-  box-shadow:0 0 20px gold;
+    transform:scale(1.05);
 }
 
 .card img {
-  width:100%;
-  border-radius:10px;
+    width:100%;
+    border-radius:10px;
 }
 
-/* BUTTON */
-.btn {
-  display:inline-block;
-  margin-top:10px;
-  padding:10px;
-  background: gold;
-  color:black;
-  text-decoration:none;
-  border-radius:5px;
-  font-weight:bold;
-  transition:0.3s;
+button {
+    background:green;
+    color:white;
+    border:none;
+    padding:10px 15px;
+    border-radius:10px;
+    cursor:pointer;
 }
 
-.btn:hover {
-  background: orange;
-  transform: scale(1.1);
+/* WhatsApp Floating */
+.whatsapp {
+    position:fixed;
+    bottom:20px;
+    right:20px;
+    background:#25D366;
+    color:white;
+    padding:15px;
+    border-radius:50%;
+    font-size:20px;
+    text-decoration:none;
 }
 
-/* CONTACT BOX */
-.box {
-  margin:20px;
-  padding:20px;
-  border-radius:15px;
-  background: rgba(0,0,0,0.8);
-  text-align:center;
-  color:#00ffcc;
-  font-weight:bold;
-  animation: fadeIn 1.5s ease;
-}
-
-/* SOCIAL */
-.social-buttons a {
-  display:inline-block;
-  margin:10px;
-  padding:12px 20px;
-  border-radius:8px;
-  text-decoration:none;
-  color:white;
-  font-weight:bold;
-  transition:0.3s;
-}
-
-.social-buttons a:hover {
-  transform: scale(1.1);
-}
-
-.whatsapp { background:#25D366; }
-.instagram { background:#E1306C; }
-.linkedin { background:#0077B5; }
-.youtube { background:#FF0000; }
-
-/* FLOAT WHATSAPP */
-.float {
-  position:fixed;
-  bottom:20px;
-  right:20px;
-  background:#25D366;
-  color:white;
-  padding:15px;
-  border-radius:50%;
-  font-size:22px;
-  text-decoration:none;
-  animation: fadeIn 2s ease;
+/* Animation */
+@keyframes fadeIn {
+    from {opacity:0; transform:translateY(20px);}
+    to {opacity:1; transform:translateY(0);}
 }
 </style>
+
 </head>
 
 <body>
 
 <header>
-  <img src="logo.png">
-  <h1>SILK GROUP</h1>
-  <p>Silk Online Services & Silk Technologies</p>
+<img src="logo.png">
+<h1>SILK GROUP</h1>
+<p>Silk Online Services & Silk Technologies</p>
 </header>
 
-<section>
+<div class="glass">
 <h2>Our Services</h2>
 <p>
 CSC Services<br>
@@ -172,9 +110,9 @@ Aadhaar, Pan Card, Passport, Bill Payments<br>
 Xerox, Printing Services<br>
 All Online Works
 </p>
-</section>
+</div>
 
-<section>
+<div class="glass">
 <h2>Our Products</h2>
 
 <div class="container">
@@ -182,39 +120,34 @@ All Online Works
 <div class="card">
 <img src="stationery.jpg">
 <h3>Stationery</h3>
-<a href="https://wa.me/919491874711" class="btn">Order</a>
+<button>Order Now</button>
 </div>
 
 <div class="card">
 <img src="gift.jpg">
 <h3>Gift Items</h3>
-<a href="https://wa.me/919491874711" class="btn">Order</a>
+<button>Order Now</button>
 </div>
 
 <div class="card">
 <img src="chocolate.jpg">
 <h3>Chocolates</h3>
-<a href="https://wa.me/919491874711" class="btn">Order</a>
+<button>Order Now</button>
 </div>
 
 <div class="card">
 <img src="icecream.jpg">
 <h3>Ice Cream</h3>
-<a href="https://wa.me/919491874711" class="btn">Order</a>
+<button>Order Now</button>
 </div>
 
 </div>
-</section>
+</div>
 
-<section>
+<div class="glass">
 <h2>Perfume Gallery</h2>
 
 <div class="container">
-
-<div class="card">
-<img src="attar.jpg">
-<h3>Attars</h3>
-</div>
 
 <div class="card">
 <img src="perfume.jpg">
@@ -222,40 +155,51 @@ All Online Works
 </div>
 
 <div class="card">
-<img src="cap.jpg">
-<h3>Islamic Caps</h3>
-</div>
-
-<div class="card">
-<img src="dates.jpg">
-<h3>Dates</h3>
+<img src="attar.jpg">
+<h3>Attars</h3>
 </div>
 
 </div>
-</section>
-
-<div class="box">
-📞 9491874711 | 9440774711<br>
-9493376611 | 9052286611
 </div>
 
-<div class="box">
-📍 Shop No:01, Below TGB Bank,<br>
-Village Manneguda, Pudur,<br>
-Vikarabad - 501101
+<div class="glass">
+<h2>Contact Us</h2>
+
+<p>
+📞 <a href="tel:9491874711">9491874711</a><br>
+📞 <a href="tel:9440774711">9440774711</a><br>
+📞 <a href="tel:9493376611">9493376611</a><br>
+📞 <a href="tel:9052286611">9052286611</a>
+</p>
+
+<p>
+📍 Shop No:01, Below TGB Bank, Village Manneguda,<br>
+Mandal Pudur, Dist Vikarabad, Pin: 501101
+</p>
+
 </div>
 
-<section>
-<h2>Connect With Us</h2>
-<div class="social-buttons">
-<a href="https://wa.me/919491874711" class="whatsapp">WhatsApp</a>
-<a href="#" class="instagram">Instagram</a>
-<a href="#" class="linkedin">LinkedIn</a>
-<a href="#" class="youtube">YouTube</a>
+<!-- Google Map -->
+<div class="glass">
+<iframe 
+src="https://maps.google.com/maps?q=Manneguda&t=&z=13&ie=UTF8&iwloc=&output=embed" 
+width="100%" height="300">
+</iframe>
 </div>
-</section>
 
-<a href="https://wa.me/919491874711" class="float">💬</a>
+<!-- Social -->
+<div class="glass" style="text-align:center;">
+<h2>Follow Us</h2>
+<p>
+<a href="#">WhatsApp</a> |
+<a href="#">Instagram</a> |
+<a href="#">LinkedIn</a> |
+<a href="#">YouTube</a>
+</p>
+</div>
+
+<!-- WhatsApp Floating -->
+<a class="whatsapp" href="https://wa.me/919491874711">💬</a>
 
 </body>
 </html>
