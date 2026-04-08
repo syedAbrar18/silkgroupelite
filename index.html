@@ -2,7 +2,6 @@
 <html>
 <head>
 <title>SILK GROUP ELITE</title>
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
@@ -10,13 +9,13 @@
 body {
     margin: 0;
     font-family: Arial;
-    background: url('background.jpg') no-repeat center center/cover;
+    background: url('background.jpg') no-repeat center/cover;
     color: white;
 }
 
-/* DARK OVERLAY */
+/* OVERLAY */
 .overlay {
-    background: rgba(0,0,0,0.6);
+    background: rgba(0,0,0,0.7);
     min-height: 100vh;
     padding: 20px;
 }
@@ -24,8 +23,6 @@ body {
 /* HEADER */
 header {
     text-align: center;
-    padding: 40px 10px;
-    animation: fadeDown 1s ease;
 }
 
 header img {
@@ -34,100 +31,74 @@ header img {
 }
 
 h1 {
-    font-size: 40px;
     background: linear-gradient(to right, gold, orange);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    margin: 10px 0;
 }
 
-p {
-    color: #ddd;
+/* CART */
+.cart {
+    position: fixed;
+    top: 10px;
+    right: 20px;
+    background: gold;
+    color: black;
+    padding: 10px;
+    border-radius: 20px;
 }
 
-/* GLASS BOX (CENTERED) */
+/* GLASS BOX */
 .glass {
     background: rgba(255,255,255,0.08);
     backdrop-filter: blur(10px);
-    padding: 30px;
+    padding: 25px;
     border-radius: 20px;
-    width: 70%;
+    width: 80%;
     margin: 30px auto;
     text-align: center;
-    animation: fadeUp 1s ease;
-    box-shadow: 0 0 20px rgba(0,0,0,0.5);
 }
 
-.glass h2 {
-    color: gold;
-}
-
-/* PRODUCTS GRID */
+/* GRID */
 .container {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 20px;
 }
 
 /* CARD */
 .card {
     background: rgba(255,255,255,0.1);
-    border-radius: 15px;
     padding: 15px;
-    width: 220px;
-    text-align: center;
-    backdrop-filter: blur(10px);
-    transition: 0.3s;
-    animation: fadeUp 1.2s ease;
-}
-
-.card:hover {
-    transform: scale(1.05);
+    border-radius: 15px;
 }
 
 .card img {
     width: 100%;
+    height: 150px;
+    object-fit: cover;
     border-radius: 10px;
 }
 
-/* BUTTON */
+/* BUTTONS */
 .btn {
-    display: inline-block;
-    margin-top: 10px;
-    padding: 10px 15px;
-    background: gold;
-    color: black;
+    margin: 5px;
+    padding: 8px 12px;
     border-radius: 8px;
-    text-decoration: none;
-    font-weight: bold;
+    border: none;
+    cursor: pointer;
 }
 
-/* SOCIAL BUTTONS */
-.social {
-    text-align: center;
-    margin-top: 40px;
-}
+.add { background: orange; }
+.buy { background: green; color: white; }
 
+/* SOCIAL */
 .social a {
     margin: 10px;
-    padding: 10px 20px;
+    padding: 10px;
     background: gold;
     color: black;
     text-decoration: none;
     border-radius: 8px;
-    display: inline-block;
-}
-
-/* ANIMATIONS */
-@keyframes fadeUp {
-    from {opacity:0; transform: translateY(30px);}
-    to {opacity:1; transform: translateY(0);}
-}
-
-@keyframes fadeDown {
-    from {opacity:0; transform: translateY(-30px);}
-    to {opacity:1; transform: translateY(0);}
 }
 
 </style>
@@ -136,6 +107,8 @@ p {
 <body>
 
 <div class="overlay">
+
+<div class="cart">🛒 <span id="count">0</span></div>
 
 <header>
     <img src="logo.png">
@@ -157,28 +130,33 @@ p {
 
     <div class="container">
 
+        <!-- PRODUCT -->
         <div class="card">
             <img src="stationery.jpg">
             <h3>Stationery</h3>
-            <a href="#" class="btn">Shop Now</a>
+            <button class="btn add" onclick="addToCart('Stationery')">Add</button>
+            <button class="btn buy" onclick="buyNow('Stationery')">Buy</button>
         </div>
 
         <div class="card">
             <img src="gift.jpg">
             <h3>Gift Items</h3>
-            <a href="#" class="btn">Shop Now</a>
+            <button class="btn add" onclick="addToCart('Gift Items')">Add</button>
+            <button class="btn buy" onclick="buyNow('Gift Items')">Buy</button>
         </div>
 
         <div class="card">
             <img src="chocolate.jpg">
             <h3>Chocolates</h3>
-            <a href="#" class="btn">Shop Now</a>
+            <button class="btn add" onclick="addToCart('Chocolates')">Add</button>
+            <button class="btn buy" onclick="buyNow('Chocolates')">Buy</button>
         </div>
 
         <div class="card">
             <img src="icecream.jpg">
             <h3>Ice Cream</h3>
-            <a href="#" class="btn">Shop Now</a>
+            <button class="btn add" onclick="addToCart('Ice Cream')">Add</button>
+            <button class="btn buy" onclick="buyNow('Ice Cream')">Buy</button>
         </div>
 
     </div>
@@ -192,32 +170,36 @@ p {
         <div class="card">
             <img src="perfume.jpg">
             <h3>Perfumes</h3>
-            <a href="#" class="btn">Shop Now</a>
+            <button class="btn add" onclick="addToCart('Perfume')">Add</button>
+            <button class="btn buy" onclick="buyNow('Perfume')">Buy</button>
         </div>
 
         <div class="card">
             <img src="attar.jpg">
             <h3>Attars</h3>
-            <a href="#" class="btn">Shop Now</a>
+            <button class="btn add" onclick="addToCart('Attar')">Add</button>
+            <button class="btn buy" onclick="buyNow('Attar')">Buy</button>
         </div>
 
         <div class="card">
             <img src="cap.jpg">
             <h3>Islamic Caps</h3>
-            <a href="#" class="btn">Shop Now</a>
+            <button class="btn add" onclick="addToCart('Caps')">Add</button>
+            <button class="btn buy" onclick="buyNow('Caps')">Buy</button>
         </div>
 
         <div class="card">
             <img src="dates.jpg">
             <h3>Dates</h3>
-            <a href="#" class="btn">Shop Now</a>
+            <button class="btn add" onclick="addToCart('Dates')">Add</button>
+            <button class="btn buy" onclick="buyNow('Dates')">Buy</button>
         </div>
 
     </div>
 </div>
 
 <div class="glass">
-    <h2>Contact Us</h2>
+    <h2>Contact</h2>
     <p>
         📞 9491874711<br>
         📞 9440774711<br>
@@ -233,14 +215,14 @@ p {
 </div>
 
 <div class="glass">
-    <h2>Our Location</h2>
+    <h2>Location</h2>
 
     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2971.1253141420716!2d77.9851502!3d17.296751900000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcbdfab6b94983f%3A0x90829c98261187fc!2sSilk%20Group%20(%20Online%20Services%2C%20Gift%20Articles%2C%20Perfumes%2C%20Attars%2C%20Stationery%20%26%20General%20Items%20)!5e1!3m2!1sen!2sin!4v1775652322186!5m2!1sen!2sin"
-    width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    width="100%" height="300" style="border:0;" allowfullscreen></iframe>
 
 </div>
 
-<div class="social">
+<div class="glass social">
     <a href="#">WhatsApp</a>
     <a href="#">Instagram</a>
     <a href="#">LinkedIn</a>
@@ -248,6 +230,24 @@ p {
 </div>
 
 </div>
+
+<script>
+
+let count = 0;
+
+function addToCart(item){
+    count++;
+    document.getElementById("count").innerText = count;
+}
+
+function buyNow(item){
+    let number = "9491874711";
+    let msg = "I want to buy: " + item;
+    let url = "https://wa.me/" + number + "?text=" + encodeURIComponent(msg);
+    window.open(url);
+}
+
+</script>
 
 </body>
 </html>
