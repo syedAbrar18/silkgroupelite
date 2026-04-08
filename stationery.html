@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Stationery - Silk Group</title>
+
+<style>
+body {
+    font-family: Arial;
+    margin: 0;
+    background: #111;
+    color: white;
+    text-align: center;
+}
+
+h1 {
+    padding: 20px;
+    color: gold;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.card {
+    background: #222;
+    padding: 15px;
+    border-radius: 15px;
+}
+
+.card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+button {
+    margin: 5px;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.add {
+    background: orange;
+}
+
+.buy {
+    background: green;
+    color: white;
+}
+</style>
+
+</head>
+
+<body>
+
+<h1>Stationery Items</h1>
+
+<div class="container">
+
+<div class="card">
+    <img src="pen.jpg">
+    <h3>Pens</h3>
+    <button class="add" onclick="addCart('Pens')">Add</button>
+    <button class="buy" onclick="buyNow('Pens')">Buy</button>
+</div>
+
+<div class="card">
+    <img src="notebook.jpg">
+    <h3>Notebooks</h3>
+    <button class="add" onclick="addCart('Notebooks')">Add</button>
+    <button class="buy" onclick="buyNow('Notebooks')">Buy</button>
+</div>
+
+<div class="card">
+    <img src="files.jpg">
+    <h3>Files</h3>
+    <button class="add" onclick="addCart('Files')">Add</button>
+    <button class="buy" onclick="buyNow('Files')">Buy</button>
+</div>
+
+</div>
+
+<script>
+
+let cart = [];
+
+function addCart(item){
+    cart.push(item);
+    alert(item + " added to cart");
+}
+
+function buyNow(item){
+    let number = "9491874711";
+    let msg = "I want to buy: " + item;
+    window.open("https://wa.me/" + number + "?text=" + encodeURIComponent(msg));
+}
+
+</script>
+
+</body>
+</html>
