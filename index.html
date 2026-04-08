@@ -36,17 +36,6 @@ h1 {
     -webkit-text-fill-color: transparent;
 }
 
-/* CART */
-.cart {
-    position: fixed;
-    top: 10px;
-    right: 20px;
-    background: gold;
-    color: black;
-    padding: 10px;
-    border-radius: 20px;
-}
-
 /* GLASS BOX */
 .glass {
     background: rgba(255,255,255,0.08);
@@ -79,19 +68,18 @@ h1 {
     border-radius: 10px;
 }
 
-/* BUTTONS */
-.btn {
-    margin: 5px;
-    padding: 8px 12px;
-    border-radius: 8px;
+/* SHOP BUTTON */
+.shop {
+    margin-top: 10px;
+    padding: 10px 15px;
+    background: linear-gradient(to right, gold, orange);
+    color: black;
+    border-radius: 10px;
     border: none;
+    font-weight: bold;
     cursor: pointer;
 }
 
-.add { background: orange; }
-.buy { background: green; color: white; }
-
-/* SOCIAL */
 .social a {
     margin: 10px;
     padding: 10px;
@@ -107,8 +95,6 @@ h1 {
 <body>
 
 <div class="overlay">
-
-<div class="cart">🛒 <span id="count">0</span></div>
 
 <header>
     <img src="logo.png">
@@ -130,33 +116,28 @@ h1 {
 
     <div class="container">
 
-        <!-- PRODUCT -->
         <div class="card">
             <img src="stationery.jpg">
             <h3>Stationery</h3>
-            <button class="btn add" onclick="addToCart('Stationery')">Add</button>
-            <button class="btn buy" onclick="buyNow('Stationery')">Buy</button>
+            <button class="shop" onclick="shopNow('Stationery')">Shop Now</button>
         </div>
 
         <div class="card">
             <img src="gift.jpg">
             <h3>Gift Items</h3>
-            <button class="btn add" onclick="addToCart('Gift Items')">Add</button>
-            <button class="btn buy" onclick="buyNow('Gift Items')">Buy</button>
+            <button class="shop" onclick="shopNow('Gift Items')">Shop Now</button>
         </div>
 
         <div class="card">
             <img src="chocolate.jpg">
             <h3>Chocolates</h3>
-            <button class="btn add" onclick="addToCart('Chocolates')">Add</button>
-            <button class="btn buy" onclick="buyNow('Chocolates')">Buy</button>
+            <button class="shop" onclick="shopNow('Chocolates')">Shop Now</button>
         </div>
 
         <div class="card">
             <img src="icecream.jpg">
             <h3>Ice Cream</h3>
-            <button class="btn add" onclick="addToCart('Ice Cream')">Add</button>
-            <button class="btn buy" onclick="buyNow('Ice Cream')">Buy</button>
+            <button class="shop" onclick="shopNow('Ice Cream')">Shop Now</button>
         </div>
 
     </div>
@@ -170,29 +151,25 @@ h1 {
         <div class="card">
             <img src="perfume.jpg">
             <h3>Perfumes</h3>
-            <button class="btn add" onclick="addToCart('Perfume')">Add</button>
-            <button class="btn buy" onclick="buyNow('Perfume')">Buy</button>
+            <button class="shop" onclick="shopNow('Perfumes')">Shop Now</button>
         </div>
 
         <div class="card">
             <img src="attar.jpg">
             <h3>Attars</h3>
-            <button class="btn add" onclick="addToCart('Attar')">Add</button>
-            <button class="btn buy" onclick="buyNow('Attar')">Buy</button>
+            <button class="shop" onclick="shopNow('Attars')">Shop Now</button>
         </div>
 
         <div class="card">
             <img src="cap.jpg">
             <h3>Islamic Caps</h3>
-            <button class="btn add" onclick="addToCart('Caps')">Add</button>
-            <button class="btn buy" onclick="buyNow('Caps')">Buy</button>
+            <button class="shop" onclick="shopNow('Islamic Caps')">Shop Now</button>
         </div>
 
         <div class="card">
             <img src="dates.jpg">
             <h3>Dates</h3>
-            <button class="btn add" onclick="addToCart('Dates')">Add</button>
-            <button class="btn buy" onclick="buyNow('Dates')">Buy</button>
+            <button class="shop" onclick="shopNow('Dates')">Shop Now</button>
         </div>
 
     </div>
@@ -209,7 +186,7 @@ h1 {
 
     <p>
         📍 Shop No:01, Below TGB Bank,<br>
-        Village Manneguda,Mandal Pudur,<br>
+        Village Manneguda, Pudur,<br>
         Vikarabad - 501101
     </p>
 </div>
@@ -233,16 +210,9 @@ h1 {
 
 <script>
 
-let count = 0;
-
-function addToCart(item){
-    count++;
-    document.getElementById("count").innerText = count;
-}
-
-function buyNow(item){
+function shopNow(item){
     let number = "9491874711";
-    let msg = "I want to buy: " + item;
+    let msg = "I want to order: " + item;
     let url = "https://wa.me/" + number + "?text=" + encodeURIComponent(msg);
     window.open(url);
 }
