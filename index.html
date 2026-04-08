@@ -1,254 +1,253 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Silk Group Elite</title>
+<title>SILK GROUP ELITE</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
+
 body {
-    margin:0;
-    font-family:Arial;
-    background:url('background.jpg') no-repeat center/cover;
-    color:gold;
+    margin: 0;
+    font-family: Arial;
+    background: url('background.jpg') no-repeat center center/cover;
+    color: white;
 }
 
-/* Glass UI */
-.glass {
-    background: rgba(0,0,0,0.7);
-    padding: 30px;
-    border-radius: 20px;
-    width: 60%;
-    margin: 40px auto;
-    text-align: center;
-    color: gold;
-    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+/* DARK OVERLAY */
+.overlay {
+    background: rgba(0,0,0,0.6);
+    min-height: 100vh;
+    padding: 20px;
 }
 
+/* HEADER */
 header {
-    text-align:center;
-    padding:30px;
+    text-align: center;
+    padding: 40px 10px;
+    animation: fadeDown 1s ease;
 }
 
 header img {
-    width:90px;
-    border-radius:50%;
+    width: 100px;
+    border-radius: 50%;
 }
 
 h1 {
-    color:gold;
+    font-size: 40px;
+    background: linear-gradient(to right, gold, orange);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin: 10px 0;
 }
 
+p {
+    color: #ddd;
+}
+
+/* GLASS BOX (CENTERED) */
+.glass {
+    background: rgba(255,255,255,0.08);
+    backdrop-filter: blur(10px);
+    padding: 30px;
+    border-radius: 20px;
+    width: 70%;
+    margin: 30px auto;
+    text-align: center;
+    animation: fadeUp 1s ease;
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+}
+
+.glass h2 {
+    color: gold;
+}
+
+/* PRODUCTS GRID */
 .container {
-    display:flex;
-    flex-wrap:wrap;
-    justify-content:center;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
 }
 
+/* CARD */
 .card {
-    background:white;
-    color:black;
-    width:250px;
-    margin:15px;
-    padding:15px;
-    border-radius:15px;
-    text-align:center;
-    transition:0.3s;
+    background: rgba(255,255,255,0.1);
+    border-radius: 15px;
+    padding: 15px;
+    width: 220px;
+    text-align: center;
+    backdrop-filter: blur(10px);
+    transition: 0.3s;
+    animation: fadeUp 1.2s ease;
 }
 
 .card:hover {
-    transform:scale(1.07);
+    transform: scale(1.05);
 }
 
 .card img {
-    width:100%;
-    border-radius:10px;
+    width: 100%;
+    border-radius: 10px;
 }
 
 /* BUTTON */
-button {
-    background:green;
-    color:white;
-    border:none;
-    padding:10px 15px;
-    border-radius:10px;
-    cursor:pointer;
+.btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 15px;
+    background: gold;
+    color: black;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
 }
 
-/* WhatsApp Floating */
-.whatsapp {
-    position:fixed;
-    bottom:20px;
-    right:20px;
-    background:#25D366;
-    color:white;
-    padding:15px;
-    border-radius:50%;
-    font-size:20px;
-    text-decoration:none;
+/* SOCIAL BUTTONS */
+.social {
+    text-align: center;
+    margin-top: 40px;
 }
 
-/* Animation */
-@keyframes fadeIn {
-    from {opacity:0; transform:translateY(20px);}
-    to {opacity:1; transform:translateY(0);}
+.social a {
+    margin: 10px;
+    padding: 10px 20px;
+    background: gold;
+    color: black;
+    text-decoration: none;
+    border-radius: 8px;
+    display: inline-block;
 }
+
+/* ANIMATIONS */
+@keyframes fadeUp {
+    from {opacity:0; transform: translateY(30px);}
+    to {opacity:1; transform: translateY(0);}
+}
+
+@keyframes fadeDown {
+    from {opacity:0; transform: translateY(-30px);}
+    to {opacity:1; transform: translateY(0);}
+}
+
 </style>
-
 </head>
 
 <body>
 
+<div class="overlay">
+
 <header>
-<img src="logo.png">
-<h1>SILK GROUP ELITE</h1>
-<p>Silk Online Services & Silk Technologies</p>
+    <img src="logo.png">
+    <h1>SILK GROUP ELITE</h1>
+    <p>Silk Online Services & Silk Technologies</p>
 </header>
 
 <div class="glass">
-<h2>Our Services</h2>
-<p>
-CSC Services<br>
-Aadhaar, Pan Card, Passport, Bill Payments<br>
-Xerox, Printing Services<br>
-All Online Works
-</p>
+    <h2>Our Services</h2>
+    <p>
+        CSC Services<br>
+        Aadhaar | PAN | Passport | Bill Payments<br>
+        Xerox | Printing | All Online Works
+    </p>
 </div>
 
-<!-- PRODUCTS -->
 <div class="glass">
-<h2>Our Products</h2>
+    <h2>Our Products</h2>
 
-<div class="container">
+    <div class="container">
 
-<div class="card">
-<img src="stationery.jpg">
-<h3>Stationery</h3>
-<a href="https://wa.me/919491874711?text=I want to order Stationery">
-<button>Shop Now</button>
-</a>
+        <div class="card">
+            <img src="stationery.jpg">
+            <h3>Stationery</h3>
+            <a href="#" class="btn">Shop Now</a>
+        </div>
+
+        <div class="card">
+            <img src="gift.jpg">
+            <h3>Gift Items</h3>
+            <a href="#" class="btn">Shop Now</a>
+        </div>
+
+        <div class="card">
+            <img src="chocolate.jpg">
+            <h3>Chocolates</h3>
+            <a href="#" class="btn">Shop Now</a>
+        </div>
+
+        <div class="card">
+            <img src="icecream.jpg">
+            <h3>Ice Cream</h3>
+            <a href="#" class="btn">Shop Now</a>
+        </div>
+
+    </div>
 </div>
 
-<div class="card">
-<img src="gift.jpg">
-<h3>Gift Items</h3>
-<a href="https://wa.me/919491874711?text=I want to order Gift Items">
-<button>Shop Now</button>
-</a>
-</div>
-
-<div class="card">
-<img src="chocolate.jpg">
-<h3>Chocolates</h3>
-<a href="https://wa.me/919491874711?text=I want to order Chocolates">
-<button>Shop Now</button>
-</a>
-</div>
-
-<div class="card">
-<img src="icecream.jpg">
-<h3>Ice Cream</h3>
-<a href="https://wa.me/919491874711?text=I want to order Ice Cream">
-<button>Shop Now</button>
-</a>
-</div>
-
-</div>
-</div>
-
-<!-- PERFUME + NEW ITEMS -->
 <div class="glass">
-<h2>Silk - The Perfume Gallery</h2>
+    <h2>Perfume Gallery</h2>
 
-<div class="container">
+    <div class="container">
 
-<div class="card">
-<img src="perfume.jpg">
-<h3>Perfumes</h3>
-<a href="https://wa.me/919491874711?text=I want to buy Perfumes">
-<button>Shop Now</button>
-</a>
+        <div class="card">
+            <img src="perfume.jpg">
+            <h3>Perfumes</h3>
+            <a href="#" class="btn">Shop Now</a>
+        </div>
+
+        <div class="card">
+            <img src="attar.jpg">
+            <h3>Attars</h3>
+            <a href="#" class="btn">Shop Now</a>
+        </div>
+
+        <div class="card">
+            <img src="cap.jpg">
+            <h3>Islamic Caps</h3>
+            <a href="#" class="btn">Shop Now</a>
+        </div>
+
+        <div class="card">
+            <img src="dates.jpg">
+            <h3>Dates</h3>
+            <a href="#" class="btn">Shop Now</a>
+        </div>
+
+    </div>
 </div>
 
-<div class="card">
-<img src="attar.jpg">
-<h3>Attars</h3>
-<a href="https://wa.me/919491874711?text=I want to buy Attars">
-<button>Shop Now</button>
-</a>
-</div>
-
-<div class="card">
-<img src="cap.jpg">
-<h3>Islamic Caps</h3>
-<a href="https://wa.me/919491874711?text=I want to buy Islamic Caps">
-<button>Shop Now</button>
-</a>
-</div>
-
-<div class="card">
-<img src="dates.jpg">
-<h3>Dates</h3>
-<a href="https://wa.me/919491874711?text=I want to buy Dates">
-<button>Shop Now</button>
-</a>
-</div>
-
-</div>
-</div>
-
-<!-- CONTACT -->
 <div class="glass">
-<h2>Contact Us</h2>
+    <h2>Contact Us</h2>
+    <p>
+        📞 9491874711<br>
+        📞 9440774711<br>
+        📞 9493376611<br>
+        📞 9052286611
+    </p>
 
-<p>
-📞 <a href="tel:9491874711">9491874711</a><br>
-📞 <a href="tel:9440774711">9440774711</a><br>
-📞 <a href="tel:9493376611">9493376611</a><br>
-📞 <a href="tel:9052286611">9052286611</a>
-</p>
-
-<p>
-📍 Shop No:01, Below TGB Bank, Village Manneguda,<br>
-Mandal Pudur, Dist Vikarabad, Pin: 501101
-</p>
-
+    <p>
+        📍 Shop No:01, Below TGB Bank,<br>
+        Village Manneguda, Pudur,<br>
+        Vikarabad - 501101
+    </p>
 </div>
 
-<!-- MAP -->
 <div class="glass">
-<h2>📍 Our Location</h2>
+    <h2>Our Location</h2>
 
-<iframe 
-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2971.1253141420716!2d77.9851502!3d17.296751900000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcbdfab6b94983f%3A0x90829c98261187fc!2sSilk%20Group%20(%20Online%20Services%2C%20Gift%20Articles%2C%20Perfumes%2C%20Attars%2C%20Stationery%20%26%20General%20Items%20)!5e1!3m2!1sen!2sin!4v1775652322186!5m2!1sen!2sin" 
-width="100%" 
-height="300" 
-style="border:0; border-radius:15px;" 
-allowfullscreen="" 
-loading="lazy">
-</iframe>
-
-<br><br>
-
-<!-- DIRECTIONS BUTTON -->
-<a href="https://maps.app.goo.gl/HCMMFux8JpjwRV826" target="_blank">
-<button style="background:orange;">📍 Get Directions</button>
-</a>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2971.1253141420716!2d77.9851502!3d17.296751900000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcbdfab6b94983f%3A0x90829c98261187fc!2sSilk%20Group%20(%20Online%20Services%2C%20Gift%20Articles%2C%20Perfumes%2C%20Attars%2C%20Stationery%20%26%20General%20Items%20)!5e1!3m2!1sen!2sin!4v1775652322186!5m2!1sen!2sin"
+    width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
 
 </div>
-<!-- SOCIAL -->
-<div class="glass" style="text-align:center;">
-<h2>Follow Us</h2>
-<p>
-<a href="#">WhatsApp</a> |
-<a href="#">Instagram</a> |
-<a href="#">LinkedIn</a> |
-<a href="#">YouTube</a>
-</p>
+
+<div class="social">
+    <a href="#">WhatsApp</a>
+    <a href="#">Instagram</a>
+    <a href="#">LinkedIn</a>
+    <a href="#">YouTube</a>
 </div>
 
-<!-- FLOATING WHATSAPP -->
-<a class="whatsapp" href="https://wa.me/919491874711">💬</a>
+</div>
 
 </body>
 </html>
