@@ -9,6 +9,7 @@
 
 <div class="header">
 Silk Store 🛍️
+<div>Cart: <span id="cartCount">0</span></div>
 </div>
 
 <h1>Perfumes</h1>
@@ -19,11 +20,20 @@ Silk Store 🛍️
 <img src="perfume.jpg">
 <h3>Premium Perfume</h3>
 <p class="price">₹500</p>
-<button class="add">Add</button>
-<button class="buy">Buy</button>
+<button class="add" onclick="addCart('Premium Perfume')">Add</button>
+<button class="buy" onclick="buyNow('Premium Perfume')">Buy</button>
+</div>
+
+<div class="card">
+<img src="perfume2.jpg">
+<h3>Luxury Perfume</h3>
+<p class="price">₹800</p>
+<button class="add" onclick="addCart('Luxury Perfume')">Add</button>
+<button class="buy" onclick="buyNow('Luxury Perfume')">Buy</button>
 </div>
 
 </div>
 
+<script src="script.js"></script>
 </body>
 </html>
