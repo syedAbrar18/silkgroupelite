@@ -9,7 +9,7 @@
 
 <div class="header">
 Silk Store 🛍️
-<div>Cart: <span id="cartCount">0</span></div>
+<div class="cart">Cart: <span id="cartCount">0</span></div>
 </div>
 
 <h1>Gift Items</h1>
@@ -20,85 +20,20 @@ Silk Store 🛍️
 <img src="gift.jpg">
 <h3>Gift Combo</h3>
 <p class="price">₹500</p>
-<button class="add" onclick="addCart('Gift')">Add</button>
-<button class="buy" onclick="buyNow('Gift')">Buy</button>
+<button class="add" onclick="addCart('Gift Combo')">Add to Cart</button>
+<button class="buy" onclick="buyNow('Gift Combo')">Buy Now</button>
 </div>
-  body {
-    font-family: Arial;
-    margin: 0;
-    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
-    url('background.jpg');
-    background-size: cover;
-    background-attachment: fixed;
-    color: white;
-}
 
-.header {
-    background: rgba(0,0,0,0.6);
-    color: gold;
-    padding: 15px;
-    display: flex;
-    justify-content: space-between;
-}
-
-h1 {
-    text-align: center;
-    color: gold;
-}
-
-.container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 30px;
-    padding: 30px;
-}
-
-.card {
-    background: rgba(255,255,255,0.1);
-    backdrop-filter: blur(10px);
-    border-radius: 15px;
-    padding: 15px;
-    text-align: center;
-}
-
-.card img {
-    width: 100%;
-    height: 220px;
-    object-fit: cover;
-    border-radius: 10px;
-}
-
-.price {
-    color: gold;
-    font-weight: bold;
-}
-
-button {
-    margin: 5px;
-    padding: 10px;
-    border-radius: 8px;
-    border: none;
-    cursor: pointer;
-}
-
-.add { background: orange; }
-.buy { background: green; color: white; }
+<div class="card">
+<img src="gift.jpg">
+<h3>Birthday Gift</h3>
+<p class="price">₹700</p>
+<button class="add" onclick="addCart('Birthday Gift')">Add to Cart</button>
+<button class="buy" onclick="buyNow('Birthday Gift')">Buy Now</button>
+</div>
 
 </div>
 
 <script src="script.js"></script>
-  let cart = [];
-
-function addCart(item){
-    cart.push(item);
-    document.getElementById("cartCount").innerText = cart.length;
-    alert(item + " added to cart 🛒");
-}
-
-function buyNow(item){
-    let number = "9491874711";
-    let msg = "I want to buy: " + item;
-    window.open("https://wa.me/" + number + "?text=" + encodeURIComponent(msg));
-}
 </body>
 </html>
