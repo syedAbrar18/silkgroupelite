@@ -2,80 +2,53 @@ body {
     margin: 0;
     font-family: Arial;
     color: white;
-
-    /* BACKGROUND FIX */
     background: url("background.jpg") no-repeat center center fixed;
     background-size: cover;
-}
-
-/* DARK OVERLAY */
-body::before {
-    content: "";
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,0.7);
-    top: 0;
-    left: 0;
-    z-index: -1;
 }
 
 .header {
     display: flex;
     justify-content: space-between;
     padding: 15px;
-    background: rgba(0,0,0,0.8);
+    background: black;
     color: gold;
-    font-size: 20px;
 }
 
 h1 {
     text-align: center;
     color: gold;
-    margin: 20px;
 }
 
 .container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 25px;
+    gap: 20px;
     padding: 20px;
 }
 
 .card {
-    background: rgba(34,34,34,0.9);
+    background: rgba(0,0,0,0.7);
     padding: 15px;
-    border-radius: 12px;
+    border-radius: 10px;
     text-align: center;
-    backdrop-filter: blur(5px);
 }
 
 .card img {
     width: 100%;
-    height: 220px;
+    height: 200px;
     object-fit: cover;
-    border-radius: 10px;
 }
 
 .price {
     color: gold;
-    font-size: 18px;
 }
 
-.add {
-    background: orange;
-    border: none;
-    padding: 10px;
+button {
     margin: 5px;
-    border-radius: 6px;
-    cursor: pointer;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
 }
 
-.buy {
-    background: green;
-    border: none;
-    padding: 10px;
-    margin: 5px;
-    border-radius: 6px;
-    cursor: pointer;
-}
+.add { background: orange; }
+.buy { background: green; color: white; }
