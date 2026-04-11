@@ -1,4 +1,3 @@
-
 let cart = 0;
 
 function addCart(item) {
