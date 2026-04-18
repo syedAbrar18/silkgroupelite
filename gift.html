@@ -2,57 +2,35 @@
 <html>
 <head>
 <title>Gift Items</title>
-<link rel="stylesheet" href="style.css">
-</head>
-
-<body>
-
-<div class="header">
-Silk Store 🛍️
-<div>Cart: <span id="cartCount">0</span></div>
-</div>
-
-<h1>Gift Items</h1>
+<h1 style="text-align:center; color:gold;">Gift Categories</h1>
 
 <div class="container">
-   <div class="card">
-<img src="images/photoframes/frame1.jpg">
+
+<!-- PHOTO FRAMES -->
+<div class="card">
+<img src="images/photoframes/frame1.jpg" class="product-img">
 <h3>Photo Frames</h3>
 <a href="photoframes.html">
-<button>Shop Now</button>
+<button class="shop-btn">Shop Now</button>
 </a>
 </div>
 
+<!-- BIRTHDAY ITEMS -->
 <div class="card">
-<img src="gift.jpg">
-<h3>Gift Combo</h3>
-<p class="price">₹500</p>
-<button class="add" onclick="addCart('Gift')">Add</button>
-<button class="buy" onclick="buyNow('Gift')">Buy</button>
-  <div class="container">
-
-<div class="card">
-<img src="gift1.jpg">
-<h3>Gift Combo</h3>
-<p class="price">₹500</p>
-<button onclick="buyNow('Gift Combo')">Buy</button>
+<img src="images/birthday/bday1.jpg" class="product-img">
+<h3>Birthday Items</h3>
+<a href="birthday.html">
+<button class="shop-btn">Shop Now</button>
+</a>
 </div>
 
+<!-- CROCKERY -->
 <div class="card">
-<img src="gift2.jpg">
-<h3>Premium Gift Box</h3>
-<p class="price">₹800</p>
-<button onclick="buyNow('Premium Gift Box')">Buy</button>
-</div>
-
-<div class="card">
-<img src="gift3.jpg">
-<h3>Birthday Gift Set</h3>
-<p class="price">₹600</p>
-<button onclick="buyNow('Birthday Gift')">Buy</button>
-</div>
-
-</div>
+<img src="images/crockery/crock1.jpg" class="product-img">
+<h3>Crockery</h3>
+<a href="crockery.html">
+<button class="shop-btn">Shop Now</button>
+</a>
 </div>
 
 </div>
