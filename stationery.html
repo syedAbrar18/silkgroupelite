@@ -280,23 +280,7 @@ button {
 
 </div>
 
-<script>
-
-let cart = [];
-
-function addCart(item){
-    cart.push(item);
-    document.getElementById("cartCount").innerText = cart.length;
-    alert(item + " added to cart 🛒");
-}
-
-function buyNow(item){
-    let number = "9493376611";
-    let msg = "I want to buy: " + item;
-    window.open("https://wa.me/" + number + "?text=" + encodeURIComponent(msg));
-}
-
-</script>
+<script src="script.js"></script>
 
 </body>
 </html>
