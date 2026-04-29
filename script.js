@@ -1,4 +1,3 @@
-<script>
 function buyNow(item, price){
 
 let qty = prompt("Enter quantity:");
@@ -11,19 +10,26 @@ let payment = prompt("Payment method: UPI / COD / Card");
 
 let total = price * qty;
 
-let msg = "Order Details:%0A"
-+ "Product: " + item + "%0A"
-+ "Quantity: " + qty + "%0A"
-+ "Total: ₹" + total + "%0A"
-+ "Address: " + address + "%0A"
-+ "Payment: " + payment;
+// PROPER FORMATTED MESSAGE
+let msg = 
+"🛒 Order Details:\n" +
+"Product: " + item + "\n" +
+"Quantity: " + qty + "\n" +
+"Total: ₹" + total + "\n" +
+"Address: " + address + "\n" +
+"Payment: " + payment;
 
+// 🔥 VERY IMPORTANT LINE (FIX)
+let url = "https://wa.me/919493376611?text=" + encodeURIComponent(msg);
+
+// OPEN WHATSAPP
+window.open(url);
+
+// UPI PAYMENT
 if(payment.toLowerCase() === "upi"){
-    let upi = "9491874711@ptsbi";  // 🔴 change this
+    let upi = "9491874711@ptsbi"; // change this
     let payLink = "upi://pay?pa=" + upi + "&pn=Silk%20Group&am=" + total + "&cu=INR";
-
     window.open(payLink);
 }
 
-window.open("https://wa.me/919493376611?text=" + encodeURIComponent(msg));
 }
