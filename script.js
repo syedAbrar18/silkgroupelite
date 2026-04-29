@@ -1,36 +1,29 @@
 <script>
-function orderNow(){
+function buyNow(item, price){
 
-let cart = JSON.parse(localStorage.getItem("cart")) || [];
+let qty = prompt("Enter quantity:");
+if(!qty) return;
 
-if(cart.length === 0){
-    alert("Cart is empty!");
-    return;
-}
-
-let name = prompt("Enter your name:");
 let address = prompt("Enter your address:");
-let payment = prompt("Payment method: UPI / Card / COD");
+if(!address) return;
 
-let msg = "Order Details:%0A";
+let payment = prompt("Payment method: UPI / COD / Card");
 
-cart.forEach((item, index) => {
-    msg += (index + 1) + ". " + item + "%0A";
-});
+let total = price * qty;
 
-msg += "%0AName: " + name;
-msg += "%0AAddress: " + address;
-msg += "%0APayment: " + payment;
+let msg = "Order Details:%0A"
++ "Product: " + item + "%0A"
++ "Quantity: " + qty + "%0A"
++ "Total: ₹" + total + "%0A"
++ "Address: " + address + "%0A"
++ "Payment: " + payment;
 
-// IF UPI SELECTED → OPEN UPI ALSO
 if(payment.toLowerCase() === "upi"){
-    let upi = "9491874711@ptsbi";
-    let payLink = "upi://pay?pa=" + upi + "&pn=Silk%20Group&cu=INR";
+    let upi = "9491874711@ptsbi";  // 🔴 change this
+    let payLink = "upi://pay?pa=" + upi + "&pn=Silk%20Group&am=" + total + "&cu=INR";
+
     window.open(payLink);
 }
 
-window.open("https://wa.me/919493376611?text=" + msg);
-
-localStorage.removeItem("cart");
+window.open("https://wa.me/919493376611?text=" + encodeURIComponent(msg));
 }
-</script>
