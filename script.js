@@ -24,12 +24,12 @@ msg += "%0APayment: " + payment;
 
 // IF UPI SELECTED → OPEN UPI ALSO
 if(payment.toLowerCase() === "upi"){
-    let upi = "9491874711@upi";
+    let upi = "9491874711@ptsbi";
     let payLink = "upi://pay?pa=" + upi + "&pn=Silk%20Group&cu=INR";
     window.open(payLink);
 }
 
-window.open("https://wa.me/919491874711?text=" + msg);
+window.open("https://wa.me/919493376611?text=" + msg);
 
 localStorage.removeItem("cart");
 }
